@@ -10,12 +10,11 @@ import {
 
 import { Constants } from 'expo';
 
-
 export default class LoginScreen extends React.Component {
   render() {
     return (
       <View style={styles.logincontainer}>
-        <Text style={styles.appName}> Rehbar</Text>
+      <Text style={styles.appName}> Rehbar</Text>
       <CredentialsInputView />
       </View>
     );
@@ -23,26 +22,25 @@ export default class LoginScreen extends React.Component {
 }
 
 class CredentialsInputView extends React.Component {
+  onPressLogin() {
+    Alert.alert('on Press!');
+  }
 
- onPressLogin() {
-  Alert.alert('on Press!');
- }
+  onPressRegistration() {
+    Alert.alert('registration');
+  }
 
- onPressRegistration() {
-   Alert.alert('registration');
- }
-
-    render() {
-      return (
-        <View style={styles.credsForm}>
+  render() {
+    return (
+      <View style={styles.credsForm}>
         <TextInput style={styles.username}
-          placeholder="username"
-          onChangeText={(text) => this.setState({text})}
+        placeholder="username"
+        onChangeText={(text) => this.setState({text})}
         />
 
         <TextInput style={styles.username}
-          placeholder="password"
-          onChangeText={(text) => this.setState({text})}
+        placeholder="password"
+        onChangeText={(text) => this.setState({text})}
         />
 
         <View style={styles.buttonContainer}>
@@ -57,15 +55,10 @@ class CredentialsInputView extends React.Component {
           title="Register"
           />
         </View>
-        </View>
-      );
-    }
-
-
-
-
+      </View>
+    );
+  }
 }
-
 
 const styles = StyleSheet.create({
   appName: {
@@ -93,9 +86,9 @@ const styles = StyleSheet.create({
     height: 'auto',
   },
   buttonContainer: {
-     flexDirection: 'row',
-     width: 'auto',
-     justifyContent: 'space-between'
+    flexDirection: 'row',
+    width: 'auto',
+    justifyContent: 'space-between'
   },
   loginButton: {
     color: '#rgb(160, 64, 0)',

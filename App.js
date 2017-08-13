@@ -9,7 +9,6 @@ import {
 import { Constants } from 'expo';
 import { TabNavigator } from "react-navigation"
 
-// import LoginScreen from './src/login/login';
 import LoginScreen from './src/login/login'
 
 
@@ -84,9 +83,6 @@ const styles = StyleSheet.create({
 export default class App extends React.Component {
   render() {
     return (
-      // <View style={styles.container}>
-      //   <MyApp />
-      // </View>
       <LoginScreen />
     );
   }
